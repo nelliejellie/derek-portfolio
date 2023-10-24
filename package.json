@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=16.18.59 <19.0.0"
+    "node": ">=18.8.0 <19.0.0"
   },
   "dependencies": {
     "@ionic/react": "^7.5.1",
@@ -12,7 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.59",
+    "@types/node": "^18.8.0",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
     "@types/react-router-dom": "^5.3.3",
