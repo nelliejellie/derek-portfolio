@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import About from "./components/About";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import ThemeContext from "./context/ThemeContext";
 
-function App() {
+const App = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+  }, []);
+
+  const { lightTheme } = useContext(ThemeContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={`${
+        lightTheme ? "bg-[#faf9f6] text-black" : "bg-[#2d2e32] text-white"
+      } min-h-screen duration-300 ease-linear`}
+    >
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
